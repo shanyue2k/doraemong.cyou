@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>推荐咨询与选线指南 — 哆啦A梦网络加速器</title>
+  <meta name="description" content="哆啦A梦网络加速器专属选购与节点推荐指南。根据您的实际使用场景（4K流媒体、AI大模型、跨境电商、外服游戏）获取最佳方案与在线技术咨询。">
+  <style>
+    :root {
+      --primary: #0077ff;
+      --primary-hover: #005ec4;
+      --primary-light: #ebf5ff;
+      --bg-body: #f8fafc;
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+      --border-color: #e2e8f0;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-full: 9999px;
+      --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: var(--font-family); background-color: var(--bg-body); color: var(--text-main); line-height: 1.7; }
+    .container { width: 100%; max-width: 960px; margin: 0 auto; padding: 0 24px; }
+    header { background: #ffffff; border-bottom: 1px solid var(--border-color); padding: 18px 0; position: sticky; top: 0; z-index: 100; }
+    .header-inner { display: flex; justify-content: space-between; align-items: center; }
+    .brand-logo { font-size: 1.35rem; font-weight: 800; color: var(--primary); text-decoration: none; display: flex; align-items: center; gap: 10px; }
+    .back-home { font-size: 0.95rem; color: var(--text-muted); text-decoration: none; font-weight: 600; display: flex; align-items: center; gap: 6px; }
+    .back-home:hover { color: var(--primary); }
+    main { padding: 48px 0 80px 0; }
+    .badge-pill { display: inline-flex; align-items: center; gap: 8px; padding: 6px 16px; border-radius: var(--radius-full); font-size: 0.88rem; font-weight: 600; background: rgba(0, 119, 255, 0.08); color: var(--primary); border: 1px solid rgba(0, 119, 255, 0.2); margin-bottom: 16px; }
+    .page-title { font-size: 2.4rem; font-weight: 900; color: #0b1528; line-height: 1.25; margin-bottom: 14px; }
+    .page-subtitle { font-size: 1.1rem; color: var(--text-muted); margin-bottom: 36px; line-height: 1.6; }
+    
+    .guide-card { background: #ffffff; border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 34px; margin-bottom: 28px; box-shadow: 0 4px 15px rgba(0,0,0,0.02); }
+    .guide-card-title { font-size: 1.4rem; font-weight: 700; color: #0f172a; margin-bottom: 18px; display: flex; align-items: center; gap: 10px; }
+    .icon-box { width: 36px; height: 36px; border-radius: 10px; background: var(--primary-light); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; }
+    
+    .scenes-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 16px; }
+    .scene-item { background: #fbfcfe; border: 1px solid #eef2f6; border-radius: var(--radius-md); padding: 22px; transition: all 0.25s; }
+    .scene-item:hover { border-color: #bfdbfe; transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0, 119, 255, 0.06); }
+    .scene-item h4 { font-size: 1.15rem; font-weight: 700; color: #0f172a; margin-bottom: 8px; display: flex; justify-content: space-between; align-items: center; }
+    .tag-recommend { font-size: 0.78rem; font-weight: 700; color: #0284c7; background: #e0f2fe; padding: 2px 10px; border-radius: var(--radius-full); }
+    .scene-item p { color: #475569; font-size: 0.95rem; line-height: 1.6; margin-bottom: 12px; }
+    .scene-item .node-choice { font-size: 0.88rem; color: var(--primary); font-weight: 600; }
+    
+    .faq-mini { display: flex; flex-direction: column; gap: 16px; }
+    .faq-mini-item { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: var(--radius-md); padding: 18px 22px; }
+    .faq-mini-q { font-weight: 700; color: #0f172a; margin-bottom: 6px; font-size: 1.02rem; }
+    .faq-mini-a { font-size: 0.95rem; color: #475569; line-height: 1.65; }
+
+    .support-channels { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 14px; }
+    .channel-box { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: var(--radius-md); padding: 20px; text-align: center; }
+    .channel-box h5 { font-size: 1.05rem; font-weight: 700; margin-bottom: 6px; color: #0f172a; }
+    .channel-box p { font-size: 0.88rem; color: var(--text-muted); }
+
+    .cta-banner { background: linear-gradient(135deg, #0077ff 0%, #0055d4 100%); color: #ffffff; border-radius: var(--radius-lg); padding: 38px 30px; text-align: center; margin-top: 36px; }
+    .btn-cta { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: #ffffff; color: var(--primary); font-weight: 700; font-size: 1.05rem; padding: 14px 32px; border-radius: var(--radius-full); text-decoration: none; margin-top: 20px; transition: all 0.25s; box-shadow: 0 4px 15px rgba(0,0,0,0.15); }
+    .btn-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(0,0,0,0.2); }
+
+    /* 高科技网格卡片 (High-Tech Grid Cards) */
+    .tech-grid-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-top: 18px;
+    }
+    .tech-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: var(--radius-md);
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+    }
+    .tech-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, #0077ff, #00d2ff);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .tech-card:hover {
+      border-color: #93c5fd;
+      transform: translateY(-4px);
+      box-shadow: 0 14px 28px -6px rgba(0, 119, 255, 0.12);
+    }
+    .tech-card:hover::before {
+      opacity: 1;
+    }
+    .tech-card-tag {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #0284c7;
+      background: #e0f2fe;
+      padding: 3px 10px;
+      border-radius: var(--radius-full);
+      margin-bottom: 12px;
+      align-self: flex-start;
+    }
+    .tech-card-title {
+      font-size: 1.12rem;
+      font-weight: 800;
+      color: #0f172a;
+      line-height: 1.45;
+      margin-bottom: 10px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .tech-card-desc {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 18px;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .tech-card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid #f1f5f9;
+      padding-top: 14px;
+      margin-top: auto;
+    }
+    .tech-card-meta {
+      font-size: 0.8rem;
+      color: #94a3b8;
+    }
+    .tech-card-btn {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .tech-card-btn:hover {
+      text-decoration: underline;
+    }
+
+    footer { text-align: center; padding: 30px 0; color: #94a3b8; font-size: 0.9rem; border-top: 1px solid var(--border-color); background: #ffffff; }
+
+    @media (max-width: 1024px) {
+      .tech-grid-cards { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 768px) {
+      .scenes-grid { grid-template-columns: 1fr; }
+      .support-channels { grid-template-columns: 1fr; }
+      .tech-grid-cards { grid-template-columns: 1fr; }
+      .page-title { font-size: 1.85rem; }
+      .guide-card { padding: 22px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo">
+        <svg width="32" height="32" viewBox="0 0 48 48" fill="none">
+          <circle cx="24" cy="24" r="22" fill="#0080FF"/>
+          <circle cx="24" cy="24" r="16" fill="#FFFFFF"/>
+          <path d="M12 24C12 17.3726 17.3726 12 24 12C30.6274 12 36 17.3726 36 24" fill="#0080FF"/>
+          <circle cx="24" cy="25" r="5" fill="#FFB703" stroke="#D97706" stroke-width="1.5"/>
+        </svg>
+        <span>哆啦A梦加速器</span>
+      </a>
+      <a href="index.html" class="back-home">
+        <span>← 返回首页</span>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="badge-pill">推荐咨询与选线指南</div>
+      <h1 class="page-title">推荐咨询与选线指南</h1>
+      <p class="page-subtitle">不知道选哪个套餐？为您梳理最适合的专线配置与节点选优技巧，助您轻松避开误区。</p>
+
+      <!-- 模块 1：按场景选购推荐 -->
+      <section class="guide-card">
+        <h2 class="guide-card-title">
+          <span class="icon-box">🎯</span>
+          1. 场景化选购与节点推荐
+        </h2>
+        <div class="scenes-grid">
+          <!-- 场景 1 -->
+          <div class="scene-item">
+            <h4>
+              <span>🍿 4K 追剧 / 流媒体发烧友</span>
+              <span class="tag-recommend">推荐标准版</span>
+            </h4>
+            <p>主攻奈飞、YouTube 4K、Disney+、HBO 等海外流媒体。需要大带宽与原生住宅 IP 支持。</p>
+            <div class="node-choice">💡 推荐节点：中国香港 IPLC 01-03、新加坡 02（秒解全区剧集）</div>
+          </div>
+
+          <!-- 场景 2 -->
+          <div class="scene-item">
+            <h4>
+              <span>🤖 AI 大模型 & 科研开发</span>
+              <span class="tag-recommend">推荐标准版 / 尊享版</span>
+            </h4>
+            <p>频繁使用 ChatGPT 4o、Claude 3.5 Sonnet、Midjourney、GitHub。对 IP 风控和稳定性要求极严苛。</p>
+            <div class="node-choice">💡 推荐节点：美国硅谷 01、日本东京 02（原生双ISP免验证）</div>
+          </div>
+
+          <!-- 场景 3 -->
+          <div class="scene-item">
+            <h4>
+              <span>💼 跨境电商 & 海外营销</span>
+              <span class="tag-recommend">推荐尊享版</span>
+            </h4>
+            <p>Amazon、Shopee、TikTok、Facebook 店铺管理。严禁 IP 频繁跳动变动，避免封号风险。</p>
+            <div class="node-choice">💡 推荐节点：长效住宅静态专线池（纯净独立环境）</div>
+          </div>
+
+          <!-- 场景 4 -->
+          <div class="scene-item">
+            <h4>
+              <span>🎮 外服电竞 & 联机对战</span>
+              <span class="tag-recommend">推荐全专线方案</span>
+            </h4>
+            <p>Steam、PlayStation、外服 Apex / 瓦罗兰特。追求 20ms 以内超低延迟与晚高峰 0 丢包。</p>
+            <div class="node-choice">💡 推荐节点：香港内网 IEPL 游戏专线（极低抖动）</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 模块 2：新手高频咨询 -->
+      <section class="guide-card">
+        <h2 class="guide-card-title">
+          <span class="icon-box">💬</span>
+          2. 常见售前与使用咨询
+        </h2>
+        <div class="faq-mini">
+          <div class="faq-mini-item">
+            <div class="faq-mini-q">Q：如何选择最适合我的节点？</div>
+            <div class="faq-mini-a">
+              客户端导入订阅后，点击“延迟测试/测速”。优先选择延迟显示在 15ms~45ms 的香港、日本、台湾专线。若访问 ChatGPT 或 Claude，建议优先选择标有「原生」或「AI解锁」字样的美西/日本节点。
+            </div>
+          </div>
+          <div class="faq-mini-item">
+            <div class="faq-mini-q">Q：多台设备同时使用，流量如何扣除？</div>
+            <div class="faq-mini-a">
+              账号流量是全设备共享扣除的。不同套餐支持同时在线的设备数不同（入门版 2 台、标准版 5 台、尊享版 10 台）。建议家庭或团队用户选购标准版或尊享版。
+            </div>
+          </div>
+          <div class="faq-mini-item">
+            <div class="faq-mini-q">Q：晚高峰期间会不会降速或卡顿？</div>
+            <div class="faq-mini-a">
+              哆啦A梦全量采用点对点物理内网专线，完全不经过公网骨干拥堵路由器，即便在晚间 20:00-23:00 黄金高峰期，测速与 4K 播放依然维持满血状态。
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 模块 3：客服与技术咨询支持通道 -->
+      <section class="guide-card">
+        <h2 class="guide-card-title">
+          <span class="icon-box">🎧</span>
+          3. 官方技术咨询与支持途径
+        </h2>
+        <div class="support-channels">
+          <div class="channel-box">
+            <h5>🎫 官方在线工单</h5>
+            <p>注册登录控制台后提交，技术人员平均 15 分钟内快速诊断与响应。</p>
+          </div>
+          <div class="channel-box">
+            <h5>📢 官方通知频道</h5>
+            <p>第一时间同步节点扩容、骨干线路切换及优惠活动动态。</p>
+          </div>
+          <div class="channel-box">
+            <h5>👥 专属交流社群</h5>
+            <p>数万名真实用户互助交流，分享最新的规则配置与使用技巧。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 模块 4：2026年机场推荐与前沿加速深度专栏 (高科技网格卡片 Grid Cards) -->
+      <section class="guide-card">
+        <h2 class="guide-card-title">
+          <span class="icon-box">📚</span>
+          4. 2026年机场推荐与技术实战精选专栏
+        </h2>
+        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px;">
+          汇集网络加速行业前沿测评、Clash分流进阶、原生住宅IP防风控与4K视听实操的 12 篇高质量深度原创专栏：
+        </p>
+
+        <div class="tech-grid-cards">
+          <!-- 卡片 1 (哆啦A梦深度专栏) -->
+          <div class="tech-card">
+            <div>
+              <span class="tech-card-tag">官方深度测评</span>
+              <h3 class="tech-card-title">2026年机场推荐精选：哆啦A梦网络加速器深度测评与Clash配置全解析</h3>
+              <p class="tech-card-desc">深度解析哆啦A梦加速器的IPLC物理专线底层拓扑、全平台一键订阅及4K流媒体与ChatGPT原生双ISP解锁实测。</p>
+            </div>
+            <div class="tech-card-footer">
+              <span class="tech-card-meta">1510 字 · 10分钟阅读</span>
+              <a href="post-dora-7k2.html" class="tech-card-btn">阅读全文 ➔</a>
+            </div>
+          </div>
+
+          <!-- 卡片 2 -->
+          <div class="tech-card">
+            <div>
+              <span class="tech-card-tag">Clash配置避坑</span>
+              <h3 class="tech-card-title">2026年Clash节点订阅配置与机场加速新手终极避坑指南</h3>
+              <p class="tech-card-desc">揭秘初学者最常踩的全局代理滥用、假延迟误导与DNS泄漏四大误区，详解TUN模式与规则自动分流调优秘籍。</p>
+            </div>
+            <div class="tech-card-footer">
+              <span class="tech-card-meta">1576 字 · 11分钟阅读</span>
+              <a href="post-clash-8x3.html" class="tech-card-btn">阅读全文 ➔</a>
+            </div>
+          </div>
+
+          <!-- 卡片 3 -->
+          <div class="tech-card">
+            <div>
+              <span class="tech-card-tag">专线底层揭秘</span>
+              <h3 class="tech-card-title">2026年机场推荐之IPLC与IEPL专线内幕：为什么普通中转频繁断流</h3>
+              <p class="tech-card-desc">从公网出口QoS限速与海缆拥塞原理切入，剖析真假专线四大鉴别法及BGP多线冗余容灾架构优势。</p>
+            </div>
+            <div class="tech-card-footer">
+              <span class="tech-card-meta">1685 字 · 12分钟阅读</span>
+              <a href="post-iepl-4m9.html" class="tech-card-btn">阅读全文 ➔</a>
+            </div>
+          </div>
+
+          <!-- 卡片 4 -->
+          <div class="tech-card">
+            <div>
+              <span class="tech-card-tag">AI生产力进阶</span>
+              <h3 class="tech-card-title">2026年稳定解锁ChatGPT与Claude 3.5的机场加速节点选择与住宅IP策略</h3>
+              <p class="tech-card-desc">破解OpenAI与Claude商业级IP声誉风控体系，详解双ISP住宅IP选型、环境指纹隔离与长连接不掉线技巧。</p>
+            </div>
+            <div class="tech-card-footer">
+              <span class="tech-card-meta">1764 字 · 13分钟阅读</span>
+              <a href="post-ai-6w1.html" class="tech-card-btn">阅读全文 ➔</a>
+            </div>
+          </div>
+
+          <!-- 卡片 5 -->
+          <div class="tech-card">
+            <div>
+              <span class="tech-card-tag">4K/8K影音发烧</span>
+              <h3 class="tech-card-title">4K/8K流媒体秒开体验：2026年奈飞与YouTube高速机场加速方案推荐</h3>
+              <p class="tech-card-desc">实测Netflix全区版权库原生解锁与YouTube 8K 60帧高码率加载，详解Apple TV大屏观影与家庭软路由部署。</p>
+            </div>
+            <div class="tech-card-footer">
+              <span class="tech-card-meta">1698 字 · 12分钟阅读</span>
+              <a href="post-speed-2p7.html" class="tech-card-btn">阅读全文 ➔</a>
+            </div>
+          </div>
+
+          <!-- 卡片 6 -->
+          <div class="tech-card">
+            <div>
+              <span class="tech-card-tag">隐私安全深度</span>
+              <h3 class="tech-card-title">零日志与多重混淆：2026年高匿名安全网络加速器与机场隐私技术解析</h3>
+              <p class="tech-card-desc">深入分析抗DPI检测的自适应TLS混淆原理、纯内存RAM-Disk无盘运行架构及全链路零日志数据防篡改防线。</p>
+            </div>
+            <div class="tech-card-footer">
+              <span class="tech-card-meta">1514 字 · 10分钟阅读</span>
+              <a href="post-sec-9f5.html" class="tech-card-btn">阅读全文 ➔</a>
+            </div>
+          </div>
+
+          <!-- 卡片 7 -->
+          <div class="tech-card">
+            <div>
+              <span class="tech-card-tag">双核心客户端</span>
+              <h3 class="tech-card-title">2026年Clash Verge Rev与Sing-box客户端配置机场节点分流进阶教程</h3>
+              <p class="tech-card-desc">深度对比现代GUI客户端与下一代通用代理平台的性能差异，详解自定义Rule-Set规则集与TUN全网卡接管。</p>
+            </div>
+            <div class="tech-card-footer">
+              <span class="tech-card-meta">1553 字 · 11分钟阅读</span>
+              <a href="post-verge-3t8.html" class="tech-card-btn">阅读全文 ➔</a>
+            </div>
+          </div>
+
+          <!-- 卡片 8 -->
+          <div class="tech-card">
+            <div>
+              <span class="tech-card-tag">跨境出海防封</span>
+              <h3 class="tech-card-title">跨境电商与外贸出海防封策略：2026年多端静态专线机场加速器推荐</h3>
+              <p class="tech-card-desc">全面解析Amazon、TikTok Shop店铺防关联逻辑，详解静态住宅专线选型、防关联浏览器绑定与外贸团队协作架构。</p>
+            </div>
+            <div class="tech-card-footer">
+              <span class="tech-card-meta">1695 字 · 12分钟阅读</span>
+              <a href="post-b2b-5y4.html" class="tech-card-btn">阅读全文 ➔</a>
+            </div>
+          </div>
+
+          <!-- 卡片 9 -->
+          <div class="tech-card">
+            <div>
+              <span class="tech-card-tag">硬核游戏电竞</span>
+              <h3 class="tech-card-title">外服联机与Steam极速下载：2026年低延迟电竞游戏专线机场推荐实测</h3>
+              <p class="tech-card-desc">实测Apex、瓦罗兰特等外服网游Full-Cone NAT穿透与UDP低抖动转发，详解Steam百兆光纤满速下载与Discord语音优化。</p>
+            </div>
+            <div class="tech-card-footer">
+              <span class="tech-card-meta">1673 字 · 12分钟阅读</span>
+              <a href="post-game-1n6.html" class="tech-card-btn">阅读全文 ➔</a>
+            </div>
+          </div>
+
+          <!-- 卡片 10 -->
+          <div class="tech-card">
+            <div>
+              <span class="tech-card-tag">套餐选购避坑</span>
+              <h3 class="tech-card-title">2026年高性价比机场推荐：月付与年付套餐深度横评及防跑路指南</h3>
+              <p class="tech-card-desc">揭秘机场虚假超卖与庞氏圈钱套路，梳理月付试错与年付折扣的权衡边界，提供识破跑路高危平台的四大反常征兆。</p>
+            </div>
+            <div class="tech-card-footer">
+              <span class="tech-card-meta">1693 字 · 12分钟阅读</span>
+              <a href="post-price-8c2.html" class="tech-card-btn">阅读全文 ➔</a>
+            </div>
+          </div>
+
+          <!-- 卡片 11 -->
+          <div class="tech-card">
+            <div>
+              <span class="tech-card-tag">苹果生态多端</span>
+              <h3 class="tech-card-title">苹果iOS小火箭Shadowrocket订阅一键导入与Clash多端协同加速教程</h3>
+              <p class="tech-card-desc">详解iPhone小火箭一键订阅与按需求连接（On-Demand）无感待机配置，打通Mac/PC电脑Clash多端协同联动。</p>
+            </div>
+            <div class="tech-card-footer">
+              <span class="tech-card-meta">1537 字 · 11分钟阅读</span>
+              <a href="post-ios-7j4.html" class="tech-card-btn">阅读全文 ➔</a>
+            </div>
+          </div>
+
+          <!-- 卡片 12 -->
+          <div class="tech-card">
+            <div>
+              <span class="tech-card-tag">年度总榜排行</span>
+              <h3 class="tech-card-title">2026年机场推荐年度大盘点：晚高峰千兆测速与稳定性综合排行榜</h3>
+              <p class="tech-card-desc">历时3个月持续盲测数十款主流梯子，全方位盘点晚高峰千兆吞吐率、三大运营商选线策略与年度综合排行榜单。</p>
+            </div>
+            <div class="tech-card-footer">
+              <span class="tech-card-meta">1706 字 · 13分钟阅读</span>
+              <a href="post-top-4z8.html" class="tech-card-btn">阅读全文 ➔</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 底部 CTA 转换 -->
+      <div class="cta-banner">
+        <h3 style="font-size: 1.6rem; margin-bottom: 10px;">选好心仪方案？即刻开启专线冲浪</h3>
+        <p style="opacity: 0.92; font-size: 1rem;">点击下方按钮直达官网注册开通，享受毫秒级秒开任意门体验。</p>
+        <!-- 呼吁性 CTA 按钮：严格包含 rel="nofollow" 和 target="_blank" -->
+        <a href="https://ongkahheng0.flashleapaff.com/#?code=Wx6Ins9f" target="_blank" rel="nofollow noopener noreferrer" class="btn-cta">
+          <span>立即开通专属加速方案</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 哆啦A梦网络加速器 · 保留所有权利</p>
+    </div>
+  </footer>
+
+</body>
+</html>

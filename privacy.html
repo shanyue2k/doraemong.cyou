@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>隐私政策 — 哆啦A梦网络加速器</title>
+  <style>
+    :root {
+      --primary: #0077ff;
+      --bg-body: #f8fafc;
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+      --border-color: #e2e8f0;
+      --radius-lg: 20px;
+      --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: var(--font-family); background-color: var(--bg-body); color: var(--text-main); line-height: 1.75; }
+    .container { width: 100%; max-width: 900px; margin: 0 auto; padding: 0 24px; }
+    header { background: #ffffff; border-bottom: 1px solid var(--border-color); padding: 18px 0; }
+    .header-inner { display: flex; justify-content: space-between; align-items: center; }
+    .brand-logo { font-size: 1.3rem; font-weight: 800; color: var(--primary); text-decoration: none; display: flex; align-items: center; gap: 8px; }
+    .back-home { font-size: 0.95rem; color: var(--text-muted); text-decoration: none; font-weight: 500; }
+    .back-home:hover { color: var(--primary); }
+    main { padding: 50px 0 80px 0; }
+    .page-title { font-size: 2.3rem; font-weight: 800; margin-bottom: 12px; color: #0b1528; }
+    .page-subtitle { font-size: 1.05rem; color: var(--text-muted); margin-bottom: 36px; padding-bottom: 20px; border-bottom: 1px solid var(--border-color); }
+    .content-card { background: #ffffff; border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 36px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
+    .card-title { font-size: 1.4rem; font-weight: 700; color: #0f172a; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+    .guarantee-box { background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%); border: 1px solid #a7f3d0; border-radius: 12px; padding: 24px; margin-bottom: 24px; color: #065f46; }
+    .guarantee-box h3 { font-size: 1.25rem; font-weight: 800; margin-bottom: 10px; color: #047857; display: flex; align-items: center; gap: 8px; }
+    p { margin-bottom: 16px; color: #334155; }
+    ul { margin-left: 24px; margin-bottom: 20px; color: #334155; }
+    li { margin-bottom: 10px; }
+    footer { text-align: center; padding: 30px 0; color: #94a3b8; font-size: 0.9rem; border-top: 1px solid var(--border-color); background: #ffffff; }
+    @media (max-width: 768px) {
+      .content-card { padding: 24px; }
+      .page-title { font-size: 1.85rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo">
+        <span>🔔 哆啦A梦网络加速器</span>
+      </a>
+      <a href="index.html" class="back-home">← 返回官网首页</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <h1 class="page-title">隐私政策</h1>
+      <p class="page-subtitle">我们视用户的隐私安全为根本生命线，坚持执行经得起技术检验的“零日志”标准</p>
+
+      <!-- 核心零日志承诺 -->
+      <section class="content-card">
+        <div class="guarantee-box">
+          <h3>🛡️ 庄严承诺：严格执行零日志记录政策</h3>
+          <p style="color: #065f46; margin-bottom: 0;">
+            哆啦A梦网络加速器郑重声明：<strong>我们在任何情况下均不记录、不保存、不监控、不出售任何用户的网络使用日志！</strong>
+          </p>
+        </div>
+
+        <h2 class="card-title">1. 我们坚决不收集和保留的数据清单</h2>
+        <p>当您连接并使用哆啦A梦加速专线时，我们的系统设计从底层杜绝了以下敏感信息的记录：</p>
+        <ul>
+          <li><strong>无浏览记录：</strong>绝不记录您访问的任何具体网址、域名、页面或 API 请求。</li>
+          <li><strong>无通信内容：</strong>绝不解析、嗅探或存储您发送或接收的数据包、下载文件或交互信息。</li>
+          <li><strong>无 DNS 查询日志：</strong>所有 DNS 请求均通过加密通道由专属防污染无日志 DNS 服务器解析，不留存历史查询记录。</li>
+          <li><strong>无 IP 映射绑定：</strong>绝不记录您的本地原始公网 IP 与出口代理 IP 之间的动态绑定映射关系。</li>
+          <li><strong>无会话时间轴：</strong>绝不记录您的具体上线/下线精确时间戳或单次连接时长。</li>
+        </ul>
+      </section>
+
+      <!-- 技术保障措施 -->
+      <section class="content-card">
+        <h2 class="card-title">2. 纯内存运行与无状态架构</h2>
+        <p>
+          为了从物理架构上落实“零日志”原则，哆啦A梦的中继加速节点全面采用纯内存镜像系统运行。服务器的操作系统与加速核心均驻留于易失性内存中，杜绝传统机械硬盘或固态硬盘写入持久化日志。一旦服务器重启或断电，内存中的所有运行临时状态将在物理层面瞬间灰飞烟灭，无法恢复。
+        </p>
+      </section>
+
+      <!-- 收集的最小化账户数据 -->
+      <section class="content-card">
+        <h2 class="card-title">3. 我们仅保留的必要账户基础信息</h2>
+        <p>为保障基础账号服务与计费正常运行，我们仅在数据库中保存以下最小化必要数据：</p>
+        <ul>
+          <li><strong>账户邮箱：</strong>用于您登录控制台、找回密码及接收系统重要维护通知（建议使用无个人实名关联的常用邮箱）。</li>
+          <li><strong>套餐状态与总流量统计：</strong>仅记录套餐有效截止日期及当月已消耗的总流量数值（仅为数字累计量，绝无流量成分与明细）。</li>
+          <li><strong>加密凭证：</strong>密码采用不可逆的加盐哈希（Argon2 / bcrypt）加密保存，任何人（包括本平台管理员）均无法还原您的明文密码。</li>
+        </ul>
+      </section>
+
+      <!-- 隐私与用户权利 -->
+      <section class="content-card">
+        <h2 class="card-title">4. 您的权利与数据完全销毁</h2>
+        <p>
+          您拥有随时注销账户并彻底清除数据的权利。若您不再需要我们的服务，可在用户控制台申请注销账户。一旦注销，您的邮箱及相关计费条目将被永久性物理擦除。
+        </p>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 哆啦A梦网络加速器 · 保留所有权利</p>
+    </div>
+  </footer>
+
+</body>
+</html>
